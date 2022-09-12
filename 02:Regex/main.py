@@ -3,7 +3,8 @@ import pandas as pd
 
 if __name__ == '__main__':
     # чтение файла csv
-    df = pd.read_csv('phonebook_raw.csv')
+    column_names = ['lastname', 'firstname', 'surname', 'organization', 'position', 'phone', 'email']
+    df = pd.read_csv('phonebook_raw.csv', usecols=column_names)
 
     # помещаем фамилию, имя и отчество в корректные колонки
     # Задание 1
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     # Задание 2
     pattern = r"(\+7|8)?(\s|-|\()*(\d{3})(\s|-|\))*(\d{3})(\s*|-)*(\d{2})(\s|-)*(\d{2})(\s|-|\()*(доб.)?(\s|-|\()*(\d{4})*(\))*"
     new_pattern = r"+7(\3)\5-\7-\9 \11\13"
-    df['phone'] = df['phone'].replace(pattern, new_pattern, regex=True)
+    df['phone'] = df['phone'].replace(pattern, new_pattern, regex=True).str.strip()
 
     # сохранение в новый csv файл
     df.to_csv('new_phonebook_raw.csv', index=False)
