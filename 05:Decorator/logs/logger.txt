@@ -1,0 +1,2 @@
+call_time: 2022-09-18 00:38:30.710431, name_function:flat_generator, arguments:Args:([['a', 'b', 'c'], ['d', 'e', 'f', 'h', False], [1, 2, None]],)_Kwargs:{}, result:<generator object flat_generator at 0x7fe5c8022f90>
+call_time: 2022-09-18 00:43:07.270873, name_function:flat_generator, arguments:Args:([['a', 'b', 'c'], ['d', 'e', 'f', 'h', False], [1, 2, None]],)_Kwargs:{}, result:<generator object flat_generator at 0x7ff1f8042f90>
