@@ -1,7 +1,7 @@
 import datetime
 
 
-def decor(path_to_logger=None):  # Задание 2
+def decor(path_to_logger=''):  # Задание 2
     def decor_(any_function):  # Задание 1
         def new_function(*args, **kwargs):
             call_time = datetime.datetime.now()
